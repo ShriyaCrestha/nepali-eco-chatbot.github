@@ -1,0 +1,105 @@
+/* =========================================================
+   team.css — "Our Team" section
+   ========================================================= */
+
+.team-section{
+  position:relative;
+  overflow:hidden;
+  padding:120px 0;
+}
+.team-decor{
+  position:absolute;
+  z-index:0;
+  pointer-events:none;
+}
+.team-decor.top-left{ top:-40px; left:-40px; width:280px; opacity:0.9; }
+.team-decor.line{ top:0; right:0; width:60%; opacity:0.5; }
+.team-section .container{ position:relative; z-index:1; }
+.team-section .section-eyebrow{ font-size:2.4rem; }
+
+.team-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:28px;
+  max-width:980px;
+  margin:0 auto;
+}
+.team-grid.lead-row{
+  grid-template-columns:repeat(2,1fr);
+  max-width:660px;
+  margin-bottom:28px;
+}
+.team-grid.team-grid--four{
+  grid-template-columns:repeat(4,1fr);
+  max-width:980px;
+  margin-top:28px;
+}
+.team-card{
+  display:flex;
+  flex-direction:column;
+  height:100%;
+  background:#fff;
+  border:1px solid var(--line-dark);
+  border-radius:var(--radius-lg);
+  padding:22px;
+  text-align:left;
+  box-shadow:var(--shadow-soft);
+}
+.team-card img{
+  width:100%;
+  aspect-ratio:4/3;
+  object-fit:cover;
+  border-radius:var(--radius-md);
+  margin-bottom:16px;
+  background:var(--cream-200);
+}
+.team-card-meta{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:10px;
+  margin-bottom:4px;
+}
+.team-card h3{
+  font-family:var(--font-display);
+  font-size:1.05rem;
+  margin:0 0 8px;
+}
+.team-card .role{
+  color:var(--mint-600);
+  font-weight:600;
+  font-size:0.85rem;
+  display:block;
+  white-space:nowrap;
+}
+.team-card p{
+  color:var(--ink-600);
+  font-size:0.85rem;
+  line-height:1.6;
+  margin:0;
+  flex:1;
+}
+.team-socials{
+  display:flex;
+  justify-content:flex-end;
+  gap:10px;
+  flex-shrink:0;
+}
+.team-socials a{
+  width:22px; height:22px;
+  border-radius:50%;
+  background:none;
+  display:grid; place-items:center;
+  color:var(--ink-400);
+  font-size:0.8rem;
+}
+.team-socials a:hover{ color:var(--forest-900); }
+.team-socials a.social-github svg{ width:14px; height:14px; }
+
+@media (max-width: 980px){
+  .team-grid, .team-grid.lead-row, .team-grid.team-grid--four{ grid-template-columns:1fr 1fr; max-width:100%; }
+}
+
+@media (max-width: 720px){
+  .team-grid, .team-grid.lead-row, .team-grid.team-grid--four{ grid-template-columns:1fr; }
+}

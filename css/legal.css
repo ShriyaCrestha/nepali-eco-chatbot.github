@@ -1,0 +1,75 @@
+/* =========================================================
+   legal.css — Terms of Service / Privacy Policy pages
+   ========================================================= */
+
+.legal-page{
+  min-height:100vh;
+  background:var(--cream-100);
+  padding:56px 24px 80px;
+}
+.legal-card{
+  max-width:840px;
+  margin:0 auto;
+  background:var(--paper-white);
+  border-radius:var(--radius-lg);
+  box-shadow:var(--shadow-soft);
+  padding:52px 60px 60px;
+  position:relative;
+}
+.legal-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  margin-bottom:34px;
+  gap:20px;
+}
+.legal-head h1{
+  font-family:var(--font-display);
+  font-size:1.7rem;
+  letter-spacing:0.02em;
+  margin:0 0 8px;
+}
+.legal-head .updated{ color:var(--ink-400); font-size:0.85rem; }
+.legal-body p{
+  color:var(--ink-600);
+  line-height:1.8;
+  font-size:0.95rem;
+  margin:0 0 22px;
+}
+.legal-body .salutation{ color:var(--ink-900); font-weight:600; margin-bottom:18px; }
+.legal-back{ text-align:center; margin-top:44px; }
+
+@media (max-width: 720px){
+  .legal-card{ padding:36px 28px 44px; }
+  .legal-head{ flex-direction:column-reverse; align-items:flex-start; }
+}
+
+/* ---- FAQ items ---- */
+.faq-item{ margin:0 0 26px; }
+.faq-item h3{
+  font-family:var(--font-display);
+  font-size:1.05rem;
+  color:var(--ink-900);
+  margin:0 0 8px;
+}
+.faq-item p{ margin:0; }
+
+/* ---- Reference list ---- */
+.reference-list{ list-style:none; margin:0; padding:0; counter-reset:ref; }
+.reference-list li{
+  counter-increment:ref;
+  color:var(--ink-600);
+  line-height:1.8;
+  font-size:0.95rem;
+  margin:0 0 18px;
+  padding-left:34px;
+  position:relative;
+}
+.reference-list li::before{
+  content:counter(ref) ".";
+  position:absolute;
+  left:0;
+  color:var(--mint-600);
+  font-weight:700;
+}
+.reference-list li strong{ color:var(--ink-900); }
